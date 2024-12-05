@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class SampleController {
 
 	/// sk/sample/name
-
 	@GetMapping("/name")
 	public ResponseEntity<String> sample() {
 		return new ResponseEntity<String>("Sumit-Kharat", HttpStatus.OK);
@@ -22,4 +21,5 @@ public class SampleController {
 	public ResponseEntity<String> sample(@PathVariable("name") String name) {
 		return new ResponseEntity<String>(name, HttpStatus.OK);
 	}
+
 }
